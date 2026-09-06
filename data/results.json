@@ -1,0 +1,21 @@
+{
+  "results": [],
+  "lastUpdated": null,
+  "source": "Official sources only - verified exam results",
+  "schema": {
+    "id": "unique identifier",
+    "title": "result title",
+    "organization": "conducting organization",
+    "category": "Central Exam | State Exam | University | Board | Recruitment | Other",
+    "examName": "name of the examination",
+    "resultAnnounceDate": "YYYY-MM-DD",
+    "status": "announced | pending | postponed",
+    "officialResultUrl": "link to official result page",
+    "officialWebsite": "official organization website",
+    "description": "brief description",
+    "lastUpdated": "YYYY-MM-DD",
+    "sourceName": "official source name",
+    "sourceUrl": "url to official source"
+  },
+  "instructions": "Add only verified, announced exam results from official sources. Do not use sample or placeholder data."
+}
