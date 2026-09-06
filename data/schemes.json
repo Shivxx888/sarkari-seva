@@ -1,0 +1,22 @@
+{
+  "schemes": [],
+  "lastUpdated": null,
+  "source": "Official sources only - government schemes",
+  "schema": {
+    "id": "unique identifier",
+    "title": "scheme name",
+    "organization": "ministry/department",
+    "category": "Social Security | Agriculture | Business | Education | Healthcare | Housing | Other",
+    "objective": "scheme objective",
+    "eligibility": "who can benefit",
+    "benefits": "what the scheme offers",
+    "applicationProcess": "how to apply",
+    "applicationUrl": "link to apply",
+    "officialWebsite": "https://www.myscheme.gov.in/",
+    "description": "brief description",
+    "lastUpdated": "YYYY-MM-DD",
+    "sourceName": "official source name",
+    "sourceUrl": "url to official source"
+  },
+  "instructions": "Add only verified government schemes from MyScheme or official ministry websites."
+}
