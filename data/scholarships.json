@@ -1,0 +1,22 @@
+{
+  "scholarships": [],
+  "lastUpdated": null,
+  "source": "Official sources only - government scholarships",
+  "schema": {
+    "id": "unique identifier",
+    "title": "scholarship name",
+    "organization": "offering organization",
+    "category": "Merit-based | Need-based | Special | Minority | SC/ST | Other",
+    "beneficiary": "targeted students",
+    "amount": "scholarship amount",
+    "eligibility": "eligibility criteria",
+    "applicationDeadline": "YYYY-MM-DD",
+    "applicationUrl": "link to apply",
+    "officialWebsite": "official organization website",
+    "description": "brief description",
+    "lastUpdated": "YYYY-MM-DD",
+    "sourceName": "official source name",
+    "sourceUrl": "url to official source"
+  },
+  "instructions": "Add only verified government scholarships from official sources."
+}
