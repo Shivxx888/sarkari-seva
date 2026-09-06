@@ -1,0 +1,23 @@
+{
+  "forms": [],
+  "lastUpdated": null,
+  "source": "Official sources only - government forms and applications",
+  "schema": {
+    "id": "unique identifier",
+    "title": "form title",
+    "organization": "issuing organization",
+    "category": "Income Certificate | Caste Certificate | Domicile | PAN | Aadhaar | Voter | Passport | Driving License | Other",
+    "purpose": "what the form is for",
+    "formUrl": "link to official form",
+    "applicableTo": "who can apply",
+    "requiredDocuments": "list of required documents",
+    "processingTime": "estimated time",
+    "fee": "if any",
+    "officialWebsite": "official organization website",
+    "description": "brief description",
+    "lastUpdated": "YYYY-MM-DD",
+    "sourceName": "official source name",
+    "sourceUrl": "url to official source"
+  },
+  "instructions": "Add only official government forms. Link to official sources, do not host fake forms."
+}
