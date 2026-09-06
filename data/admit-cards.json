@@ -1,0 +1,22 @@
+{
+  "admitCards": [],
+  "lastUpdated": null,
+  "source": "Official sources only - verified admit cards",
+  "schema": {
+    "id": "unique identifier",
+    "title": "admit card title",
+    "examName": "name of the examination",
+    "organization": "conducting organization",
+    "category": "Central Exam | State Exam | University | Recruitment | Other",
+    "admitCardReleaseDate": "YYYY-MM-DD",
+    "examDate": "YYYY-MM-DD",
+    "status": "released | pending | postponed",
+    "admitCardUrl": "link to download admit card",
+    "officialWebsite": "official organization website",
+    "description": "brief description",
+    "lastUpdated": "YYYY-MM-DD",
+    "sourceName": "official source name",
+    "sourceUrl": "url to official source"
+  },
+  "instructions": "Add only verified, released admit cards from official sources. Do not use sample or placeholder data."
+}
