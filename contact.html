@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Sarkari Seva</title>
+  <meta name="description" content="Contact Sarkari Seva - Get in touch with us for feedback, issues, or suggestions.">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background: #172554;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #60a5fa;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+      background: white;
+      border-radius: 12px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      color: #172554;
+      margin-bottom: 20px;
+      font-size: 38px;
+    }
+
+    h2 {
+      color: #172554;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #475569;
+      line-height: 1.8;
+    }
+
+    .contact-box {
+      background: #eef4ff;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      border-left: 4px solid #2563eb;
+    }
+
+    .contact-box strong {
+      color: #172554;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #172554;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #172033;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    button:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+
+    .message {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .message.success {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+      display: none;
+    }
+
+    .message.error {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fca5a5;
+      display: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      display: block;
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      padding: 15px;
+      border-top: 1px solid #1e293b;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 650px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .container {
+        padding: 30px 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <a href="index.html" class="logo">
+        🇮🇳 Sarkari<span>Seva</span>
+      </a>
+
+      <nav>
+        <a href="index.html#services">Services</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="pdf/index.html">PDF Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <h1>📧 Contact Sarkari Seva</h1>
+
+    <p>
+      Have a question, found an error, or want to suggest a feature? We'd love to hear from you!
+    </p>
+
+    <div class="contact-box">
+      <strong>📬 Email:</strong> contact@sarkari-seva.in
+      <br><br>
+      <strong>⏰ Response Time:</strong> We try to respond within 48 hours.
+    </div>
+
+    <h2>Send Us a Message</h2>
+
+    <div id="message" class="message"></div>
+
+    <form id="contactForm">
+
+      <div class="form-group">
+        <label for="name">Your Name *</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter your full name"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Enter your email address"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject *</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          placeholder="What is this about?"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea
+          id="message-text"
+          name="message"
+          required
+          placeholder="Tell us what you think..."
+        ></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+    <h2 style="margin-top: 50px;">Frequently Asked Questions</h2>
+
+    <h3 style="color: #172554; margin-top: 20px; margin-bottom: 10px;">How long does it take to respond?</h3>
+    <p>
+      We try to respond to all messages within 48 hours during business days. During weekends or holidays, it may take longer.
+    </p>
+
+    <h3 style="color: #172554; margin-top: 20px; margin-bottom: 10px;">Do you respond to job inquiries?</h3>
+    <p>
+      Sarkari Seva is not hiring at this time. We are a small independent team. For job opportunities, check official government job portals.
+    </p>
+
+    <h3 style="color: #172554; margin-top: 20px; margin-bottom: 10px;">Can you help me apply for government services?</h3>
+    <p>
+      We cannot directly help apply for services, but we provide links to official government websites. Always apply directly through the official portal.
+    </p>
+
+    <h3 style="color: #172554; margin-top: 20px; margin-bottom: 10px;">How do I report a broken link?</h3>
+    <p>
+      Please use the contact form above and include the broken link URL and where you found it. We'll fix it as soon as possible.
+    </p>
+
+    <h3 style="color: #172554; margin-top: 20px; margin-bottom: 10px;">Can I suggest a new feature?</h3>
+    <p>
+      Yes! Use the contact form to suggest features or improvements. We read all suggestions.
+    </p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>🇮🇳 SarkariSeva</h3>
+        <p>
+          Government services, information, forms, results aur free document tools ek hi platform par.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="pdf/index.html">PDF Tools</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <div>
+        <h3>Important</h3>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 SarkariSeva. All Rights Reserved. | Independent Information Platform
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message-text').value.trim();
+      const messageDiv = document.getElementById('message');
+
+      // Validation
+      if (!name || !email || !subject || !message) {
+        messageDiv.className = 'message error';
+        messageDiv.textContent = '❌ Please fill all required fields.';
+        messageDiv.style.display = 'block';
+        return;
+      }
+
+      if (!email.includes('@')) {
+        messageDiv.className = 'message error';
+        messageDiv.textContent = '❌ Please enter a valid email address.';
+        messageDiv.style.display = 'block';
+        return;
+      }
+
+      // Simulate form submission (in real scenario, this would send to server)
+      const formData = {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        timestamp: new Date().toISOString()
+      };
+
+      // Show success message
+      messageDiv.className = 'message success';
+      messageDiv.textContent = '✅ Thank you! We\'ve received your message. We\'ll get back to you soon!';
+      messageDiv.style.display = 'block';
+
+      // Reset form
+      document.getElementById('contactForm').reset();
+
+      // In a real implementation, you would:
+      // 1. Send data to server/email service
+      // 2. Store in database
+      // 3. Send confirmation email
+
+      // For now, just show success
+      console.log('Form data:', formData);
+    });
+  </script>
+
+</body>
+</html>
