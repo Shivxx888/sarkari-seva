@@ -1,0 +1,25 @@
+{
+  "jobs": [],
+  "lastUpdated": null,
+  "source": "Official sources only - verified recruitment data",
+  "schema": {
+    "id": "unique identifier",
+    "title": "job title",
+    "organization": "recruiting organization name",
+    "category": "Central Government | State Government | PSU | Bank | Insurance | Education | Other",
+    "qualification": "required educational qualification",
+    "posts": "position name",
+    "vacancyCount": "number of positions",
+    "applicationStartDate": "YYYY-MM-DD",
+    "applicationEndDate": "YYYY-MM-DD",
+    "examDate": "YYYY-MM-DD or TBA",
+    "status": "active | closed | postponed | cancelled",
+    "officialNotificationUrl": "link to official notification",
+    "officialWebsite": "official organization website",
+    "description": "brief description",
+    "lastUpdated": "YYYY-MM-DD",
+    "sourceName": "official source name",
+    "sourceUrl": "url to official source"
+  },
+  "instructions": "Add only verified, current job data from official government/recruitment sources. Do not use sample, placeholder, or outdated data."
+}
