@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sarkari Seva - सरकारी सेवाएं, Jobs, Forms & Free PDF Tools</title>
+  <meta name="description" content="Sarkari Seva - Government jobs, results, admit cards, forms, public services and free PDF tools in one place.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background: #172554;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #60a5fa;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #172554, #312e81);
+      color: white;
+      padding: 65px 20px;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      max-width: 700px;
+      margin: 0 auto 25px;
+      font-size: 17px;
+    }
+
+    .search-box {
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 16px;
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .search-box button {
+      border: none;
+      background: #2563eb;
+      color: white;
+      padding: 0 25px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      color: #172554;
+    }
+
+    .section-title p {
+      color: #64748b;
+      margin-top: 5px;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      background: white;
+      border-radius: 14px;
+      padding: 25px 18px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(15,23,42,0.10);
+    }
+
+    .category .icon {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .category h3 {
+      font-size: 17px;
+      color: #172554;
+      margin-bottom: 5px;
+    }
+
+    .category p {
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    /* AD */
+    .ad-box {
+      max-width: 900px;
+      min-height: 90px;
+      margin: 25px auto;
+      border: 1px dashed #94a3b8;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      border-radius: 10px;
+      font-size: 13px;
+    }
+
+    /* UPDATES */
+    .updates {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .update-box {
+      background: white;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      overflow: hidden;
+    }
+
+    .update-header {
+      background: #172554;
+      color: white;
+      padding: 15px 18px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .update-list {
+      list-style: none;
+    }
+
+    .update-list li {
+      padding: 13px 18px;
+      border-bottom: 1px solid #eef2f7;
+      font-size: 14px;
+    }
+
+    .update-list li:last-child {
+      border-bottom: none;
+    }
+
+    .update-list a:hover {
+      color: #2563eb;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      padding: 2px 7px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    /* FREE PDF */
+    .free-pdf {
+      background: #eef4ff;
+      border-radius: 18px;
+      padding: 35px 25px;
+      margin-top: 25px;
+    }
+
+    .pdf-tools {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .pdf-tool {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #dbeafe;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .free-label {
+      display: inline-block;
+      background: #16a34a;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* OFFICIAL */
+    .official {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .official a {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .official a:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      display: block;
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      padding: 15px;
+      border-top: 1px solid #1e293b;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pdf-tools {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .official {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 45px 15px;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box button {
+        padding: 13px;
+      }
+
+      .categories,
+      .updates,
+      .pdf-tools,
+      .official,
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 35px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+
+      <a href="#" class="logo">
+        🇮🇳 Sarkari<span>Seva</span>
+      </a>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#pdf">PDF Tools</a>
+        <a href="#official">Official Portals</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>All Sarkari Services in One Place</h1>
+
+      <p>
+        Government Jobs, Results, Forms, Public Services
+        aur Free PDF Tools ek hi jagah.
+      </p>
+
+      <div class="search-box">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search service, job, result, PDF tool..."
+          onkeyup="searchServices()"
+        >
+
+        <button onclick="searchServices()">Search</button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AD SPACE -->
+  <div class="ad-box">
+    Advertisement Space
+  </div>
+
+
+  <!-- SERVICES -->
+  <section class="container" id="services">
+
+    <div class="section-title">
+      <h2>Popular Services</h2>
+      <p>Apni required service select karein</p>
+    </div>
+
+    <div class="categories">
+
+      <a href="#results" class="category searchable">
+        <div class="icon">🏛️</div>
+        <h3>Sarkari Result</h3>
+        <p>Jobs, Results, Admit Card & Answer Key</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">📝</div>
+        <h3>Forms & Applications</h3>
+        <p>Government Forms & Application Links</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">🪪</div>
+        <h3>Aadhaar Services</h3>
+        <p>Official Aadhaar Services</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">💳</div>
+        <h3>PAN Card</h3>
+        <p>New PAN, Correction & Status</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">🗳️</div>
+        <h3>Voter ID</h3>
+        <p>Registration, Correction & Status</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">🚗</div>
+        <h3>Driving Licence</h3>
+        <p>DL Services & Application Status</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">🛂</div>
+        <h3>Passport</h3>
+        <p>Passport Application & Status</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">🏢</div>
+        <h3>Public CSC Services</h3>
+        <p>Public-use government services</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">🍚</div>
+        <h3>Ration Card</h3>
+        <p>Ration Card Services & Information</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">📜</div>
+        <h3>Certificates</h3>
+        <p>Income, Caste & Domicile Services</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">🎓</div>
+        <h3>Scholarship</h3>
+        <p>Government Scholarship Information</p>
+      </a>
+
+      <a href="#" class="category searchable">
+        <div class="icon">💼</div>
+        <h3>Government Schemes</h3>
+        <p>Public Welfare Schemes</p>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PDF TOOLS -->
+  <section class="container" id="pdf">
+
+    <div class="free-pdf">
+
+      <div class="section-title">
+        <h2>
+          📄 Free PDF Tools
+          <span class="free-label">100% FREE</span>
+        </h2>
+
+        <p>
+          PDF aur document ke useful tools — no paid features.
+        </p>
+      </div>
+
+      <div class="pdf-tools">
+
+        <a href="#" class="pdf-tool">📎 Merge PDF</a>
+        <a href="#" class="pdf-tool">✂️ Split PDF</a>
+        <a href="#" class="pdf-tool">🗜️ Compress PDF</a>
+        <a href="#" class="pdf-tool">🖼️ JPG → PDF</a>
+
+        <a href="#" class="pdf-tool">📄 PDF → JPG</a>
+        <a href="#" class="pdf-tool">🔄 Rotate PDF</a>
+        <a href="#" class="pdf-tool">🗑️ Delete Pages</a>
+        <a href="#" class="pdf-tool">↔️ Reorder Pages</a>
+
+        <a href="#" class="pdf-tool">💧 Watermark PDF</a>
+        <a href="#" class="pdf-tool">📐 Resize PDF</a>
+        <a href="#" class="pdf-tool">📷 Scan Document</a>
+        <a href="#" class="pdf-tool">🖼️ Compress Image</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESULTS / UPDATES -->
+  <section class="container" id="results">
+
+    <div class="section-title">
+      <h2>Latest Updates</h2>
+      <p>Latest jobs, results aur government updates</p>
+    </div>
+
+    <div class="updates">
+
+      <div class="update-box">
+
+        <div class="update-header">
+          🔥 Latest Jobs
+        </div>
+
+        <ul class="update-list">
+
+          <li>
+            Government Job Updates
+            <span class="badge">NEW</span>
+          </li>
+
+          <li>Latest Recruitment Notifications</li>
+          <li>Central Government Jobs</li>
+          <li>State Government Jobs</li>
+          <li>Educational Recruitment</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="update-box">
+
+        <div class="update-header">
+          📢 Latest Results
+        </div>
+
+        <ul class="update-list">
+
+          <li>
+            Latest Exam Results
+            <span class="badge">NEW</span>
+          </li>
+
+          <li>University Results</li>
+          <li>Recruitment Results</li>
+          <li>Entrance Exam Results</li>
+          <li>Board Results</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AD SPACE -->
+  <div class="ad-box">
+    Advertisement Space
+  </div>
+
+
+  <!-- OFFICIAL PORTALS -->
+  <section class="container" id="official">
+
+    <div class="section-title">
+      <h2>🔗 Important Official Portals</h2>
+      <p>Government websites ko directly access karein</p>
+    </div>
+
+    <div class="official">
+
+      <a href="https://uidai.gov.in/" target="_blank">
+        Aadhaar / UIDAI
+      </a>
+
+      <a href="https://www.incometax.gov.in/" target="_blank">
+        Income Tax
+      </a>
+
+      <a href="https://voters.eci.gov.in/" target="_blank">
+        Voter Services
+      </a>
+
+      <a href="https://parivahan.gov.in/" target="_blank">
+        Parivahan
+      </a>
+
+      <a href="https://www.passportindia.gov.in/" target="_blank">
+        Passport
+      </a>
+
+      <a href="https://www.india.gov.in/" target="_blank">
+        India.gov.in
+      </a>
+
+      <a href="https://www.myscheme.gov.in/" target="_blank">
+        MyScheme
+      </a>
+
+      <a href="https://www.digitalindia.gov.in/" target="_blank">
+        Digital India
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-content">
+
+      <div>
+        <h3>🇮🇳 SarkariSeva</h3>
+
+        <p>
+          Government services, information,
+          forms, results aur free document tools
+          ek hi platform par.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#pdf">PDF Tools</a>
+        <a href="#official">Official Portals</a>
+      </div>
+
+      <div>
+        <h3>Important</h3>
+
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 SarkariSeva. All Rights Reserved.
+    </div>
+
+  </footer>
+
+
+  <!-- SEARCH SCRIPT -->
+  <script>
+
+    function searchServices() {
+
+      const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+      const items =
+        document.querySelectorAll(".searchable");
+
+      items.forEach(function(item) {
+
+        const text =
+          item.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
